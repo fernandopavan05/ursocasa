@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #d3a9e3;
+    margin: 0;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0 0 0;
+    scale: 1.6;
+    color: white;
+}
+
+.cartao {
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+    border-radius: 12px;
+}
+
+.cartao:hover {
+    transform: rotate(-5deg);
+}
+
+.cartao:hover .externo {
+    transform: rotateY(-130deg);
+}
+
+.externo,
+.interno {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+}
+
+.interno {
+    background: linear-gradient(to right, #08d6ed, #8a2be2, #ff69b4);
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+    transition: 2s;
+}
+
+.internoimg {
+    position: absolute;
+}
+
+.cartao:hover .interno {
+    left: 50%;
+}
+
+.externo {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.frente,
+.tras {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+
+.frente {
+    background: linear-gradient(to left, #08d6ed, #8a2be2, #ff69b4);
+
+}
+
+.tras {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e8c5e9, #6131bb56);
+    position: relative;
+
+   
+
+
+.img {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.camada-superior,
+.camada-meio,
+.camada-inferior {
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 68px 188px;
+    position: relative;
+    margin: auto;
+}
+
+.camada-superior {
+    background-image: linear-gradient(transparent 50px, #fedbab 58px, #fedbab 60px, transparent 60px);
+    radial-gradient: before(circle at 30px 5px, #994c10);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 0;
+    transform: scale(0.7);
+}
+
+.camada-meio {
+    transform: scale(0.85);
+    top: 8px;
+}
+
+.camada-inferior {
+    top: 16px;
+}
+
+.externo p {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 6px;
+}
